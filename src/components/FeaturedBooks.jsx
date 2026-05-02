@@ -23,11 +23,11 @@ const FeaturedBooks = () => {
             <p className="text-gray-500 text-sm mb-4">{book.author}</p>
             
      {/* assignmnt recuirment view details */}
-            <Link href={`/book/${book.id}`}>
-              <Button className="w-full bg-black text-white dark:bg-white dark:text-black rounded-lg">
-                View Details
-              </Button>
-            </Link>
+            <Link href={`/all-books/${book.id}`}>
+  <Button className="w-full bg-black text-white dark:bg-white dark:text-black rounded-lg py-5 font-semibold">
+    View Details
+  </Button>
+</Link>
           </div>
         ))}
       </div>
