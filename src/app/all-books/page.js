@@ -34,7 +34,7 @@ export default function AllBooksPage() {
               <p className="text-gray-500 text-sm mb-4">{book.author}</p>
             </div>
             
-            <Link href={`/book/${book.id}`}>
+            <Link href={`/all-books/${book.id}`}>
               <Button 
                 variant="flat"
                 className="w-full bg-black text-white dark:bg-white dark:text-black rounded-xl py-6 font-semibold"
