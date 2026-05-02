@@ -24,7 +24,7 @@ const Navbar = () => {
             height={30}
             className="h-auto w-auto"
           />
-          <h3 className="font-black text-lg">BookBorrow.</h3>
+          <h3 className="font-black text-lg">BookBorrow</h3>
         </div>
 
         {/* Links  */}
