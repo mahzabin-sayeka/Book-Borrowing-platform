@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "title": "The Midnight Library",
+    "author": "Matt Haig",
+    "description": "A beautiful story about the choices that go into a life lived and the library between life and death.",
+    "category": "Story",
+    "available_quantity": 5,
+    "image_url": "https://images.unsplash.com/photo-1544947950-fa07a98d237f?q=80&w=500"
+  },
+  {
+    "id": 2,
+    "title": "Clean Code",
+    "author": "Robert C. Martin",
+    "description": "A handbook of agile software craftsmanship, essential for writing professional and maintainable code.",
+    "category": "Tech",
+    "available_quantity": 3,
+    "image_url": "https://images.unsplash.com/photo-1516116216624-53e697fedbea?q=80&w=500"
+  },
+  {
+    "id": 3,
+    "title": "A Brief History of Time",
+    "author": "Stephen Hawking",
+    "description": "An iconic exploration of cosmology, black holes, and the origin of the universe.",
+    "category": "Science",
+    "available_quantity": 8,
+    "image_url": "https://images.unsplash.com/photo-1614728894747-a83421e2b9c9?q=80&w=500"
+  },
+  {
+    "id": 4,
+    "title": "The Alchemist",
+    "author": "Paulo Coelho",
+    "description": "A philosophical story following a young shepherd's journey to find worldly treasures.",
+    "category": "Story",
+    "available_quantity": 12,
+    "image_url": "https://images.unsplash.com/photo-1543004218-ee141104338e?q=80&w=500"
+  },
+  {
+    "id": 5,
+    "title": "The Pragmatic Programmer",
+    "author": "Andrew Hunt",
+    "description": "Lessons and career advice for modern developers to improve their software engineering skills.",
+    "category": "Tech",
+    "available_quantity": 4,
+    "image_url": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=500"
+  },
+  {
+    "id": 6,
+    "title": "Astrophysics for People in a Hurry",
+    "author": "Neil deGrasse Tyson",
+    "description": "A quick and entertaining guide to the basic principles governing the cosmos.",
+    "category": "Science",
+    "available_quantity": 7,
+    "image_url": "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?q=80&w=500"
+  },
+  {
+    "id": 7,
+    "title": "Circe",
+    "author": "Madeline Miller",
+    "description": "A compelling retelling of the Greek myth of Circe, the goddess of sorcery.",
+    "category": "Story",
+    "available_quantity": 6,
+    "image_url": "https://images.unsplash.com/photo-1474932430478-3a7fb9067bd0?q=80&w=500"
+  },
+  {
+    "id": 8,
+    "title": "The Phoenix Project",
+    "author": "Gene Kim",
+    "description": "A novel about IT, DevOps, and helping your business win through technology.",
+    "category": "Tech",
+    "available_quantity": 2,
+    "image_url": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=500"
+  },
+  {
+    "id": 9,
+    "title": "The Selfish Gene",
+    "author": "Richard Dawkins",
+    "description": "A landmark study of evolution and natural selection from the perspective of the gene.",
+    "category": "Science",
+    "available_quantity": 5,
+    "image_url": "https://images.unsplash.com/photo-1532187875605-2fe3587b1508?q=80&w=500"
+  },
+  {
+    "id": 10,
+    "title": "Norwegian Wood",
+    "author": "Haruki Murakami",
+    "description": "A nostalgic story of loss and burgeoning sexuality in 1960s Tokyo.",
+    "category": "Story",
+    "available_quantity": 9,
+    "image_url": "https://images.unsplash.com/photo-1524578271613-d550eebad500?q=80&w=500"
+  },
+  {
+    "id": 11,
+    "title": "Refactoring",
+    "author": "Martin Fowler",
+    "description": "Guidance on improving the design of existing code without changing its external behavior.",
+    "category": "Tech",
+    "available_quantity": 4,
+    "image_url": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=500"
+  },
+  {
+    "id": 12,
+    "title": "Cosmos",
+    "author": "Carl Sagan",
+    "description": "An exploration of 15 billion years of cosmic evolution and the development of science.",
+    "category": "Science",
+    "available_quantity": 10,
+    "image_url": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=500"
+  }
+]
