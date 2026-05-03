@@ -10,6 +10,7 @@ const Navbar = () => {
   const pathname = usePathname();
   const router = useRouter();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [catOpen, setCatOpen] = useState(false); 
   
   const { data: session } = authClient.useSession();
   const user = session?.user; 
@@ -25,6 +26,9 @@ const Navbar = () => {
       },
     });
   };
+
+  
+  const categories = ["Fiction", "Sci-Fi", "Romance", "History", "Programming", "Kids"];
 
   return (
     <div className="border-b px-4 bg-white relative">
@@ -55,8 +59,36 @@ const Navbar = () => {
               <Link href="/profile" className={`px-4 py-2 rounded-md ${pathname === "/profile" ? "bg-black text-white" : "hover:bg-gray-100"}`}>Profile</Link>
             </li>
           )}
-          <li>
-            <Link href="/categories" className={`px-4 py-2 rounded-md ${pathname === "/categories" ? "bg-black text-white" : "hover:bg-gray-100"}`}>Categories</Link>
+
+          {/* Dynamic Category Dropdown Design */}
+          <li className="relative">
+            <button 
+              onMouseEnter={() => setCatOpen(true)}
+              onMouseLeave={() => setCatOpen(false)}
+              className={`px-4 py-2 rounded-md flex items-center gap-1 ${pathname.includes("/categories") ? "bg-black text-white" : "hover:bg-gray-100"}`}
+            >
+              Categories
+              <svg className={`w-4 h-4 transition-transform ${catOpen ? "rotate-180" : ""}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
+            </button>
+
+            {/* Dropdown Menu */}
+            {catOpen && (
+              <div 
+                onMouseEnter={() => setCatOpen(true)}
+                onMouseLeave={() => setCatOpen(false)}
+                className="absolute top-full left-0 w-48 bg-white border border-gray-100 shadow-xl rounded-xl py-2 z-[60] animate-in fade-in slide-in-from-top-1"
+              >
+                {categories.map((cat) => (
+                  <Link 
+                    key={cat}
+                    href={`/categories/${cat.toLowerCase()}`}
+                    className="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-black transition-colors"
+                  >
+                    {cat}
+                  </Link>
+                ))}
+              </div>
+            )}
           </li>
         </ul>
 
@@ -99,11 +131,19 @@ const Navbar = () => {
             <li><Link href="/" onClick={() => setMenuOpen(false)} className={`block p-2 rounded ${pathname === "/" ? "bg-black text-white" : ""}`}>Home</Link></li>
             <li><Link href="/all-books" onClick={() => setMenuOpen(false)} className={`block p-2 rounded ${pathname === "/all-books" ? "bg-black text-white" : ""}`}>All Books</Link></li>
             {user && <li><Link href="/profile" onClick={() => setMenuOpen(false)} className={`block p-2 rounded ${pathname === "/profile" ? "bg-black text-white" : ""}`}>Profile</Link></li>}
-            <li><Link href="/categories" onClick={() => setMenuOpen(false)} className={`block p-2 rounded ${pathname === "/categories" ? "bg-black text-white" : ""}`}>Categories</Link></li>
+            
+            {/* Mobile Categories (Simple List) */}
+            <div className="py-2">
+              <p className="font-bold px-2 mb-1 text-gray-400 uppercase text-[10px]">Categories</p>
+              {categories.slice(0, 4).map(cat => (
+                <li key={cat}><Link href={`/categories/${cat.toLowerCase()}`} onClick={() => setMenuOpen(false)} className="block p-2 text-gray-600">{cat}</Link></li>
+              ))}
+            </div>
+
             <hr />
             {!user ? (
               <div className="flex flex-col gap-2">
-                <Link href="/register" onClick={() => setMenuOpen(false)}>SignUp</Link>
+                <Link href="/signup" onClick={() => setMenuOpen(false)}>SignUp</Link>
                 <Link href="/login" onClick={() => setMenuOpen(false)}>Login</Link>
               </div>
             ) : (
