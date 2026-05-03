@@ -8,6 +8,7 @@ const SignUpPage = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [image, setImage] = useState('');
     const router = useRouter();
 
     const handleSignUp = async (e) => {
@@ -24,7 +25,7 @@ const SignUpPage = () => {
                 email,
                 password,
                 name,
-                image: `https://ui-avatars.com/api/?name=${name}`,
+                image: image || `https://ui-avatars.com/api/?name=${name}`,
             }, {
                 onSuccess: () => {
                     toast.success("Registered successfully! Welcome.", { id: toastId });
@@ -64,6 +65,15 @@ const SignUpPage = () => {
                             required 
                             className="w-full p-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-black" 
                             onChange={(e) => setEmail(e.target.value)} 
+                        />
+                    </div>
+                    <div>
+                        <label className="block text-sm font-medium mb-1">Photo URL</label>
+                        <input 
+                            type="url" 
+                            placeholder="https://example.com/photo.jpg" 
+                            className="w-full p-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-black" 
+                            onChange={(e) => setImage(e.target.value)} 
                         />
                     </div>
                     <div>
