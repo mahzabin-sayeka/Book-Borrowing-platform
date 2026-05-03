@@ -1,18 +1,14 @@
 import { betterAuth } from "better-auth";
-import { MongoClient } from "mongodb";
-import { mongodbAdapter } from "better-auth/adapters/mongodb";
+import { prismaAdapter } from "better-auth/adapters/prisma";
+import { PrismaClient } from "@prisma/client";
 
-const client = new MongoClient(process.env.MONGODB_URI);
-const db = client.db("BookBorrow");
+const prisma = new PrismaClient();
 
 export const auth = betterAuth({
-  database: mongodbAdapter(db, {
-    // Optional: if you don't provide a client, database transactions won't be enabled.
-    client
-  }),
-
-  emailAndPassword: { 
-    enabled: true, 
-  },
-
+    database: prismaAdapter(prisma, {
+        provider: "mongodb",
+    }),
+    emailAndPassword: {
+        enabled: true,
+    },
 });

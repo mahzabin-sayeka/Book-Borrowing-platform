@@ -1,8 +1,12 @@
+"use client"; 
 import booksData from "@/data/books.json";
 import { Button } from "@heroui/react";
 import Link from "next/link";
+import { authClient } from "@/lib/auth-client"; 
 
 export default function AllBooksPage() {
+  
+  const { data: session } = authClient.useSession();
   
   const books = Array.isArray(booksData) ? booksData : [];
 
@@ -34,7 +38,8 @@ export default function AllBooksPage() {
               <p className="text-gray-500 text-sm mb-4">{book.author}</p>
             </div>
             
-            <Link href={`/all-books/${book.id}`}>
+           
+            <Link href={session ? `/all-books/${book.id}` : "/login"}>
               <Button 
                 variant="flat"
                 className="w-full bg-black text-white dark:bg-white dark:text-black rounded-xl py-6 font-semibold"
