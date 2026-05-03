@@ -1,15 +1,11 @@
-// import { Button } from "@heroui/react";
-// import Link from "next/link";
-
-// const Banner = () => {
-//   return (
-
-// export default Banner;
-
+"use client";
 import { Button } from "@heroui/react";
 import Link from "next/link";
+import { authClient } from "@/lib/auth-client"; 
 
 const Banner = () => {
+  const { data: session } = authClient.useSession(); 
+
   return (
     <div className="bg-[url('https://images.unsplash.com/photo-1507842217343-583bb7270b66?q=80&w=2000&auto=format&fit=crop')] h-[60vh] w-full bg-cover bg-no-repeat bg-center flex items-center rounded-lg shadow-2xl">
       
@@ -32,7 +28,8 @@ const Banner = () => {
               </Button>
             </Link>
 
-            <Link href="/profile">
+            
+            <Link href={session ? "/profile" : "/login"}>
               <Button variant="bordered" className="text-white border-white hover:bg-white/10 px-8 py-6">
                 My Profile
               </Button>
