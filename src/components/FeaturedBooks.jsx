@@ -1,5 +1,6 @@
-// import booksData from "@/data/books.json";
-import booksData from "../data/books.json";
+import booksData from "@/data/books.json";
+// import booksData from "../data/books.json";
+// import booksData from "/src/data/books.json";
 import { Button } from "@heroui/react";
 import Link from "next/link";
 

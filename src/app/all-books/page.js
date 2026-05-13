@@ -1,7 +1,8 @@
 "use client"; 
 import { useState } from "react"; 
-// import booksData from "@/data/books.json";
-import booksData from "../../data/books.json";
+import booksData from "@/data/books.json";
+// import booksData from "../../data/books.json";
+// import booksData from "/src/data/books.json";
 import { Button, Input } from "@heroui/react"; 
 import Link from "next/link";
 import { authClient } from "@/lib/auth-client"; 
