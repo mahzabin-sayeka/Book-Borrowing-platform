@@ -28,12 +28,12 @@
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  
-  allowedDevOrigins: ['192.168.0.107'], 
-  
   experimental: {
     serverActions: {
-      allowedOrigins: ['192.168.0.107:3000', 'localhost:3000'],
+      allowedOrigins: [
+        'book-borrowing-platform-five.vercel.app',
+        'localhost:3000'
+      ],
     },
   },
 };

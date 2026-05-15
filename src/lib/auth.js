@@ -26,8 +26,11 @@ export const auth = betterAuth({
     emailAndPassword: {
         enabled: true,
     },
-    // new
-    trustedOrigins: ["https://book-borrowing-platform-five.vercel.app"],
+    
+    baseURL: process.env.BETTER_AUTH_URL, 
+    trustedOrigins: [
+        "https://book-borrowing-platform-five.vercel.app"
+    ],
     advanced: {
         trustProxy: true
     }
