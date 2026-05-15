@@ -1,9 +1,9 @@
 # BookBorrow - Online Book Borrowing Platform
 
-This is a web application built with Next.js and MongoDB to manage book borrowing digitally. It allows users to explore, search, and borrow books while ensuring a secure and responsive experience.
+This is a web application built with Next.js and MongoDB to manage book borrowing digitally. It allows users to explore, search, and borrow books while ensuring a secure and responsive experience. it has different categories so that anybody can easily finds their desire books. also it allows to update profile information and easily register by goggle account without any hassle.
 
 ## Live URL
-[Insert your Vercel link here]
+(https://book-borrowing-platform-five.vercel.app/)
 
 ## Purpose
 The purpose of BookBorrow is to digitize library tasks. It helps users find books easily and borrow them through a modern interface. The project focuses on security and a clean user experience.
@@ -23,14 +23,8 @@ The purpose of BookBorrow is to digitize library tasks. It helps users find book
 - @heroui/react
 - tailwindcss
 - react-hot-toast
-- swiper
 - lucide-react
 
-## How to Setup
-1. Clone the repo: https://github.com/mahzabin-sayeka/Book-Borrowing-platform
-2. Install dependencies: npm install
-3. Configure your .env.local file.
-4. Run the project: npm run dev
 
 ---
 Author: Mahzabin Jannath Sayeka
