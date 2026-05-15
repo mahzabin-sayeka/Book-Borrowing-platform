@@ -28,7 +28,7 @@ const Navbar = () => {
   };
 
   
-  const categories = ["Fiction", "Sci-Fi", "Romance", "History", "Programming", "Kids"];
+  const categories = ["Story", "Tech", "Science", "Fiction", "History"];
 
   return (
     <div className="border-b px-4 bg-white relative">
@@ -133,11 +133,22 @@ const Navbar = () => {
             <li><Link href="/all-books" onClick={() => setMenuOpen(false)} className={`block p-2 rounded ${pathname === "/all-books" ? "bg-black text-white" : ""}`}>All Books</Link></li>
             {user && <li><Link href="/profile" onClick={() => setMenuOpen(false)} className={`block p-2 rounded ${pathname === "/profile" ? "bg-black text-white" : ""}`}>Profile</Link></li>}
             
-            {/* Mobile Categories (Simple List) */}
+            {/* Mobile Categories er ongsho */}
             <div className="py-2">
               <p className="font-bold px-2 mb-1 text-gray-400 uppercase text-[10px]">Categories</p>
-              {categories.slice(0, 4).map(cat => (
-                <li key={cat}><Link href={`/categories/${cat.toLowerCase()}`} onClick={() => setMenuOpen(false)} className="block p-2 text-gray-600">{cat}</Link></li>
+              {categories.slice(0, 6).map(cat => (
+                <li key={cat}>
+                  {/* <Link href={`/categories/${cat.toLowerCase()}`} onClick={() => setMenuOpen(false)} className="block p-2 text-gray-600">{cat}</Link> */}
+
+                  <Link href={`/all-books?filter=${cat.toLowerCase()}`} 
+        onClick={() => setMenuOpen(false)} 
+        className="block p-2 text-gray-600"
+      >
+        {cat}
+      </Link>
+
+
+                  </li>
               ))}
             </div>
 
