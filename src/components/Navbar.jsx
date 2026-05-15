@@ -81,7 +81,8 @@ const Navbar = () => {
                 {categories.map((cat) => (
                   <Link 
                     key={cat}
-                    href={`/categories/${cat.toLowerCase()}`}
+                    // href={`/categories/${cat.toLowerCase()}`}
+                    href={`/all-books?filter=${cat.toLowerCase()}`}
                     className="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-black transition-colors"
                   >
                     {cat}
